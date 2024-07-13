@@ -806,7 +806,7 @@ if __name__ == "__main__":
 ## Output gerado da minha implementação:
 
 
-```asm
+```bash
           testing string_length on "asdkbasdka"
   string_length : compiled
 " asdkbasdka " -> ('', 10)
