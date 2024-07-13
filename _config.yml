@@ -229,3 +229,5 @@ jekyll-archives:
   permalinks:
     tag: /tags/:name/
     category: /categories/:name/
+
+  favicon: assets/img/Reverse-Engineering_icon.png
