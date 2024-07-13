@@ -38,7 +38,7 @@ categories: x86 assembly
 # Minha implementação
 
 
-```asm
+```nasm
 ; por ser iniciante, algumas implementações podem estar ineficientes e/ou mal otimizadas, use por sua conta e risco
 
 section .text
@@ -309,7 +309,7 @@ string_copy:
 [Código modificado para otimizações de versão do python](https://github.com/gyu-don/low-level-programming/blob/test_py3/assignments/1_io_library/stud/test.py)
 
 
-```gas
+```python
 #!/usr/bin/python
 
 from __future__ import print_function, division
