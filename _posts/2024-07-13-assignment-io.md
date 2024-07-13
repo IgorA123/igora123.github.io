@@ -5,14 +5,11 @@ date: 2024-07-13 12:00:00 -0300
 categories: x86 assembly
 ---
 
-# Ambiente
+## Ambiente
 
 `Linux 5.10.16.3-microsoft-standard-WSL2 #1 SMP x86_64 x86_64 x86_64 GNU/Linux`
-
 `NASM version 2.15.05`
-
 `gcc (Ubuntu 11.4.0-1ubuntu1~22.04) 11.4.0`
-
 `gdb (Ubuntu 12.1-0ubuntu1~22.04) 12.1`
 
 # Biblioteca de entrada/saída
@@ -33,10 +30,7 @@ categories: x86 assembly
 | string_equals  | Accepts two pointers to strings and compares them. Returns 1 if they are equal, otherwise 0. |
 | string_copy    | Accepts a pointer to a string, a pointer to a buffer, and buffer’s length. Copies string to the destination. The destination address is returned if the string fits the buffer; otherwise zero s returned. |
 
-
-
-# Minha implementação
-
+## Minha implementação
 
 ```nasm
 ; por ser iniciante, algumas implementações podem estar ineficientes e/ou mal otimizadas, use por sua conta e risco
@@ -302,7 +296,7 @@ string_copy:
 
 [Solução do autor no Github](https://github.com/Apress/low-level-programming/blob/master/assignments/1_io_library/teacher/lib.inc)
 
-# Arquivo test.py
+## Arquivo test.py
 
 [Original do Github](https://github.com/Apress/low-level-programming/blob/master/assignments/1_io_library/teacher/test.py)
 
