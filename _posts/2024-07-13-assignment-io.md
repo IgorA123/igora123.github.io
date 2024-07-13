@@ -8,9 +8,13 @@ categories: x86 assembly
 ## Ambiente
 
 `Linux 5.10.16.3-microsoft-standard-WSL2 #1 SMP x86_64 x86_64 x86_64 GNU/Linux`
+
 `NASM version 2.15.05`
+
 `gcc (Ubuntu 11.4.0-1ubuntu1~22.04) 11.4.0`
+
 `gdb (Ubuntu 12.1-0ubuntu1~22.04) 12.1`
+
 
 # Biblioteca de entrada/saída
 
