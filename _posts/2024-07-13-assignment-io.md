@@ -19,7 +19,7 @@ categories: x86 assembly
 
 | Function       | Definition |
 
-|:-------------- | ----------:|
+| :-------------- | ----------: |
 
 | exit           | Accepts an exit code and terminates current process. |
 
