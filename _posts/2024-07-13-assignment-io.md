@@ -16,7 +16,7 @@ categories: x86 assembly
 `gdb (Ubuntu 12.1-0ubuntu1~22.04) 12.1`
 
 
-# Biblioteca de entrada/saída
+## Biblioteca de entrada/saída
 
 | Function       | Definition |
 | -------------- | ---------- |
