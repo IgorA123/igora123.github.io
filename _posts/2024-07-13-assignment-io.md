@@ -222,7 +222,8 @@ parse_uint:
 
     sub rcx, '0'            ; subtraia 0x30 para "converter" o ASCII
     push rdx
-    mul r8                  ; multiplicar o valor de rax por 10 (e liberar um dígito à direita)
+    mul r8                  ; multiplicar o valor de rax por 10
+                            ; (e liberar um dígito à direita)
     pop rdx
 
     add rax, rcx            ; "cole" o valor convertido no espaço liberado
