@@ -5,6 +5,10 @@ date: 2024-07-13 12:00:00 -0300
 categories: x86 assembly
 ---
 
+Um bom começo para entrar no ramo de engenharia reversa, é entender como um computador funciona, hoje usamos majoritariamente arquitetura x86 e ARM. E uma forma que encontrei de estudar mais sobre "baixo nível" foi ler o livro "Programação em Baixo Nível" de Igor Zhirkov, onde ele aborda desde o começo da computação. Nos primeiros capítulos, após explicar o básico de Assembly, ele introduz um exercício onde o leitor precisa implementar uma simples biblioteca de Entrada e Saída de dados (a tabela das implementações está abaixo).
+
+Cada função a ser implementada possui suas próprias características, e é necessário compreender bem sobre como os registradores funcionam e quais são as convenções para que o código seja mais funcional, estou longe de ser um profissional em Assembly, mas fui capaz de concluir o exercício e passar no teste (em python) que o autor disponibiliza para os leitores. Espero que goste da leitura.
+
 ## Ambiente
 
 `Linux 5.10.16.3-microsoft-standard-WSL2 #1 SMP x86_64 x86_64 x86_64 GNU/Linux`
@@ -37,7 +41,8 @@ categories: x86 assembly
 ## Minha implementação
 
 ```nasm
-; por ser iniciante, algumas implementações podem estar ineficientes e/ou mal otimizadas, use por sua conta e risco
+; por ser iniciante, algumas implementações podem estar ineficientes e/ou mal otimizadas, 
+; use por sua conta e risco
 
 section .text
 
@@ -86,7 +91,8 @@ print_uint:
     push 0                  ; terminador nulo (8 bytes)
     sub rsp, 16             ; alocar espaço na pilha (buffer)
 
-    dec rdi                 ; decrementar rdi para apontar para o final do buffer (próxima posição livre)
+    dec rdi                 ; decrementar rdi para apontar para o final do buffer 
+                            ; (próxima posição livre)
     mov r8, 10              ; valor a ser usado nas divisões
     .div_loop:
     xor rdx, rdx            ; zerar rdx para armazenar os restos das divisões
@@ -104,7 +110,8 @@ print_uint:
     ret
 
 print_int:
-    test rdi, rdi           ; verifica se rdi é igual a 0 para saber se é positivo ou negativo
+    test rdi, rdi           ; verifica se rdi é igual a 0 para saber se é positivo
+                            ; ou negativo
     jns print_uint          ; se for positivo, vá para print_uint
     push rdi                ; guarde rdi na pilha
     mov rdi, '-'            ; mover o sinal de negativo para rdi
@@ -125,7 +132,8 @@ read_char:
 
 read_word:
     push r14                ; salvar o estado dos regs r14 e r15
-    push r15                ; r14 será o contador de caracteres e r15 armazenará o endereço do buffer
+    push r15                ; r14 será o contador de caracteres e r15 armazenará
+                            ; o endereço do buffer
 
     xor r14, r14
     mov r15, rsi 
@@ -209,7 +217,8 @@ parse_uint:
     cmp byte [rdi], '9'     ; ver se o caractere está acima de 0x39 ASCII
     ja .end
 
-    movzx rcx, byte [rdi]   ; se chegou aqui, é um dígito, copie para rcx no tamanho correto (zero-extended)
+    movzx rcx, byte [rdi]   ; se chegou aqui, é um dígito, copie para rcx no 
+                            ; tamanho correto (zero-extended)
 
     sub rcx, '0'            ; subtraia 0x30 para "converter" o ASCII
     push rdx
@@ -290,7 +299,8 @@ string_copy:
     .end:
     mov byte [rsi], 0       ; terminador nulo na string de destino
     mov rax, rsi            ; mover endereço final da string de destino para rax
-    sub rax, rcx            ; subtrair a quantidade de bytes copiados para retornar o endereço inicial da string de destino
+    sub rax, rcx            ; subtrair a quantidade de bytes copiados para 
+                            ; retornar o endereço inicial da string de destino
     ret
 
     .not_good:
@@ -1043,3 +1053,11 @@ if __name__ == "__main__":
   [   ok   ]
 Good work, all tests are passed
 ```
+## Lições aprendidas
+
+Esse exercício deixou mais que claro pra mim como funcionam as syscalls, que são basicamente rotinas que o sistema operacional organiza para o usuário, pois não é ideal que um programa feito pelos usuários atinja alguma parte crítica do SO.
+Um aprendizado importante na minha visão nesse exercício foi que me fez criar uma analogia onde programação em Assembly é como uma "indústria" com várias engrenagens (os registradores), e cada engrenagem nessa indústria serve propósitos e usos próprios, e assim o programa segue uma "ordem" onde a entrada/saída de dados passa por essas engrenagens, numa linha de produção e sendo "operada" de acordo com o que o código pede.
+
+Ainda há muito o que estudar, mas esse foi um passo importante quebrar qualquer medo ou pré-conceito da linguagem Assembly. Fique antenado nos próximos posts!
+
+Obrigado por ler.
