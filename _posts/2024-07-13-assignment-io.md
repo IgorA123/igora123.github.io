@@ -5,7 +5,7 @@ date: 2024-07-13 12:00:00 -0300
 categories: x86 assembly
 ---
 
-Um bom começo para entrar no ramo de engenharia reversa, é entender como um computador funciona, hoje usamos majoritariamente arquitetura x86 e ARM. E uma forma que encontrei de estudar mais sobre "baixo nível" foi ler o livro "Programação em Baixo Nível" de Igor Zhirkov, onde ele aborda desde o começo da computação. Nos primeiros capítulos, após explicar o básico de Assembly, ele introduz um exercício onde o leitor precisa implementar uma simples biblioteca de Entrada e Saída de dados (a tabela das implementações está abaixo).
+Um bom começo para entrar no ramo de engenharia reversa, é entender como um computador funciona, hoje usamos majoritariamente arquitetura x86 e ARM. E uma forma que encontrei de estudar mais sobre "baixo nível" foi ler o livro ["Programação em Baixo Nível"](https://www.amazon.com.br/Programa%C3%A7%C3%A3o-Baixo-N%C3%ADvel-Programas-Arquitetura/dp/8575226673) de Igor Zhirkov, onde ele aborda desde o começo da computação. Nos primeiros capítulos, após explicar o básico de Assembly, ele introduz um exercício onde o leitor precisa implementar uma simples biblioteca de Entrada e Saída de dados (a tabela das implementações está abaixo).
 
 Cada função a ser implementada possui suas próprias características, e é necessário compreender bem sobre como os registradores funcionam e quais são as convenções para que o código seja mais funcional, estou longe de ser um profissional em Assembly, mas fui capaz de concluir o exercício e passar no teste (em python) que o autor disponibiliza para os leitores. Espero que goste da leitura.
 
