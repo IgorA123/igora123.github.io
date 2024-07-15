@@ -40,10 +40,12 @@ Cada função a ser implementada possui suas próprias características, e é ne
 
 ## Minha implementação
 
-```nasm
-; por ser iniciante, algumas implementações podem estar ineficientes e/ou mal otimizadas, 
-; use por sua conta e risco
+<!-- markdownlint-capture -->
+<!-- markdownlint-disable -->
+> Por ser iniciante, algumas implementações podem estar ineficientes e/ou mal otimizadas.
+{: .prompt-warning }
 
+```nasm
 section .text
 
 exit:
