@@ -26,5 +26,9 @@ th, td {
   word-wrap: break-word;
   white-space: normal; 
   overflow-wrap: break-word; 
-  max-width: 300px; 
+  max-width: 200px; 
+}
+
+.highlighter-rouge {
+  overflow: auto; 
 }
