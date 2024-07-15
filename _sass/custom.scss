@@ -17,18 +17,14 @@ code {
 }
 
 table {
-  width: 50%;
-  table-layout: auto; /* Tabela auto-ajustável */
+  width: 100%;
+  table-layout: auto; 
   word-wrap: break-word;
 }
 
 th, td {
   word-wrap: break-word;
-  white-space: normal; 
+  white-space: normal; /
   overflow-wrap: break-word; 
-}
-
-
-.highlighter-rouge {
-  overflow: auto; 
+  max-width: 300px; 
 }
