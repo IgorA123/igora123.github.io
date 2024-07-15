@@ -18,7 +18,7 @@ code {
 
 table {
   width: 100%;
-  table-layout: auto; 
+  table-layout: fixed; 
   word-wrap: break-word;
 }
 
@@ -26,8 +26,7 @@ th, td {
   word-wrap: break-word;
   white-space: normal;
   overflow-wrap: break-word;
-  max-width: 500000px; 
-  display: block; 
+  max-width: 500000px;
 }
 
 .highlighter-rouge {
