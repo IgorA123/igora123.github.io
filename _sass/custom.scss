@@ -15,3 +15,14 @@ code {
   white-space: -o-pre-wrap; /* Opera 7 */
   word-wrap: break-word; /* IE */
 }
+
+table {
+  width: 100%;
+  table-layout: auto;
+  word-wrap: break-word;
+}
+
+th, td {
+  word-wrap: break-word;
+  white-space: normal;
+}
