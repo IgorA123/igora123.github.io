@@ -18,7 +18,7 @@ code {
 
 table {
   width: 100%;
-  table-layout: fixed; 
+  table-layout: auto; /* Tabela auto-ajustável */
   word-wrap: break-word;
 }
 
@@ -26,4 +26,9 @@ th, td {
   word-wrap: break-word;
   white-space: normal; 
   overflow-wrap: break-word; 
+}
+
+
+.highlighter-rouge {
+  overflow: auto; 
 }
